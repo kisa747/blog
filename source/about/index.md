@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about
 title: 关于
 date: 2009-07-05 20:11:32
 comments: false
