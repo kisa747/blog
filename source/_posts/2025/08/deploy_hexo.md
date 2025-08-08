@@ -1,10 +1,12 @@
-# 说明文档
+---
+layout: post
+title:  Hexo 部署指南
+date: 2025-08-06 22:09
+categories: 技巧分享
+tags: [hexo]
+---
 
-[![Pages](https://github.com/kisa747/blog-backup/actions/workflows/pages.yml/badge.svg)](https://github.com/kisa747/blog-backup/actions/workflows/pages.yml)
-
-> 旧博客存档
-
-## 本地部署指南
+## 本地部署
 
 ```sh
 # 安装最新的 nodejs 长期支持版本
@@ -33,9 +35,11 @@ hexo clean && hexo server
 hexo clean && hexo generate
 ```
 
-## 发布
+## 发布至网络
 
 ### 方法一、使用 Github Actions 发布
+
+参考：<https://hexo.io/zh-cn/docs/github-pages>
 
 Github - Pages - Build and deployment - Source 设置为 `Github Actions`
 
@@ -45,9 +49,7 @@ Github - Pages - Build and deployment - Source 设置为 `Github Actions`
 
 Github - Pages - Build and deployment - Source 设置为 `Deploy from a branch`
 
-本地生成静态网址文件，然后推送至指定仓库。
-
-首先配置仓库信息，编辑 `_config.yml` 
+本地生成静态网址文件，然后推送至指定仓库。`_config.yml` 配置文件中配置好仓库信息：
 
 ```yaml
 # Deployment
@@ -55,7 +57,7 @@ Github - Pages - Build and deployment - Source 设置为 `Deploy from a branch`
 # username换成自己的用户名和仓库名,去掉括号
 deploy:
     type: git
-    repo: git@github.com:kisa747/blog-backup.git
+    repo: git@github.com:***/***.git
     branch: gh-pages
 ```
 
