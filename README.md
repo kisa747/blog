@@ -26,6 +26,7 @@ npm install hexo-server --save
 npm install hexo-theme-fluid --save
 
 # 本地预览
+start http://localhost:4000
 hexo clean && hexo server
 
 # 生成静态网站文件。生成至 public 文件夹下
