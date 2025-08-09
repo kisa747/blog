@@ -1,6 +1,7 @@
 name: Pages
 
 on:
+  workflow_dispatch:  # 手动运行
   push:
     branches:
       - main # default branch
@@ -26,7 +27,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('node_modules/*package-lock.json') }}
+          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/*package-lock.json') }}
           restore-keys: |
             ${{ runner.OS }}-npm-cache-${{ hashFiles('**/*package-lock.json') }}
             ${{ runner.OS }}-npm-cache-
