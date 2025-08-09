@@ -21,11 +21,11 @@ hexo init
 # 创建网站，npm将会自动安装你需要的组件，只需要等待npm操作即可。
 npm install
 # 局部安装 Git 部署工具
-npm install hexo-deployer-git --save
+npm install hexo-deployer-git
 # 局部安装服务器模块
-npm install hexo-server --save
+npm install hexo-server
 # 安装主题
-npm install hexo-theme-fluid --save
+npm install hexo-theme-fluid
 
 # 本地预览
 start http://localhost:4000
@@ -57,7 +57,7 @@ Github - Pages - Build and deployment - Source 设置为 `Deploy from a branch`
 # username换成自己的用户名和仓库名,去掉括号
 deploy:
     type: git
-    repo: git@github.com:***/***.git
+    repo: git@github.com:**/**.git
     branch: gh-pages
 ```
 
