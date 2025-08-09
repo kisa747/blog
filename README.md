@@ -9,7 +9,7 @@
 ```sh
 # 安装最新的 nodejs 长期支持版本
 scoop install nodejs-lts
-# 持久使用淘宝源
+# 更换淘宝源
 npm config set registry https://registry.npmmirror.com
 # 全局安装Hexo，为了能够使用hexo命令。
 npm install hexo-cli -g
