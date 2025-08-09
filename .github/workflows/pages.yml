@@ -23,14 +23,14 @@ jobs:
           node-version: "lts/*"
           cache: 'npm'  # 缓存地址 ~/.npm
           cache-dependency-path: '**/package.json'
-      - name: Cache NPM dependencies
+      - name: Cache node_modules
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package.json') }}
+          key: ${{ runner.OS }}-node-node_modules-cache-${{ hashFiles('**/package.json') }}
           restore-keys: |
-            ${{ runner.OS }}-npm-cache-${{ hashFiles('**/package.json') }}
-            ${{ runner.OS }}-npm-cache-
+            ${{ runner.OS }}-node-node_modules-cache-${{ hashFiles('**/package.json') }}
+            ${{ runner.OS }}-node-node_modules-cache-
       - name: Install Dependencies
         run: npm install
       - name: Build
