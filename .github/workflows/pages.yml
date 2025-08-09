@@ -28,6 +28,7 @@ jobs:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache-${{ hashFiles('node_modules/*package-lock.json') }}
           restore-keys: |
+            ${{ runner.OS }}-npm-cache-${{ hashFiles('node_modules/*package-lock.json') }}
             ${{ runner.OS }}-npm-cache-
       - name: Install Dependencies
         run: npm install
